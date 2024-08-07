@@ -1181,7 +1181,7 @@ body, h3, p, a {
 
 .product-desc-side {
     padding: 20px;
-    background: #fff;
+    /* background: #fff; */
    
     transition: all 0.3s ease;
 }
@@ -1203,6 +1203,7 @@ body, h3, p, a {
     text-decoration: none;
     display: block;
     position: relative;
+    padding-bottom: 10px;
 }
 
 .product-desc-side h3 a::after {
@@ -1221,8 +1222,8 @@ body, h3, p, a {
 }
 
 .product-desc-side p {
-    font-size: 16px;
-    color: #666;
+    font-size: 17px;
+    /* color: #666; */
     line-height: 1.6;
     margin-bottom: 15px;
 }
@@ -1376,3 +1377,162 @@ input.btn.btn-end{
     border: 2px solid #ffffff;
 }
 
+body {
+    /* background: linear-gradient(to right, #d9afd9 0%, #97d9e1 100%); Ungu ke biru */
+
+    /* background: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 100%); Ungu muda ke biru muda  */
+
+    /* background: linear-gradient(to right, #f5f7fa 0%, #c3cfe2 100%); Gradasi biru */
+
+    /* background: linear-gradient(to right, #fff1eb 0%, #ace0f9 100%); */
+
+/* background: linear-gradient(to right, #f5f7fa 0%, #c3cfe2 100%); */
+
+}
+/* CSS untuk tampilan desktop */
+@media (min-width: 769px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+
+    .col-md-6 {
+        width: 50%;
+        padding: 15px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .side-A, .side-B {
+        flex: 1;
+        margin-bottom: 20px;
+    }
+
+    .side-B {
+        order: 2;
+    }
+
+    .side-A {
+        order: 1;
+    }
+
+    .remove-padd-right {
+        padding-right: 0;
+    }
+
+    .remove-padd-left {
+        padding-left: 0;
+    }
+
+    .product-thumb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-thumb .image img {
+        max-width: 100%;
+        height: auto;
+       
+    }
+
+    .product-desc-side {
+        padding: 20px;
+        
+    }
+
+    .product-desc-side h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .product-desc-side p {
+        /* font-size: 1em; */
+        line-height: 1.5;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/* CSS untuk tampilan mobile */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-sm-12, .col-xs-12 {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .product-thumb {
+        width: 100%;
+    }
+
+    .product-thumb .image img {
+        width: 100%;
+        height: auto;
+        
+    }
+
+    .product-desc-side {
+        padding: 15px;
+        /* background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-desc-side h3 {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    .product-desc-side p {
+        font-size: 1em;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .side-A, .side-B {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .side-B {
+        order: 2;
+    }
+
+    .side-A {
+        order: 1;
+    }
+
+    .clear {
+        display: none;
+    }
+}
