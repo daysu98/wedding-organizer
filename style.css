@@ -871,9 +871,9 @@ padding: 60px 0; /*  Tambahan */
     background: #f8f9fa; }
     .site-footer .inner.first {
       padding-top: 80px; }
-  @media (max-width: 991.98px) {
+  /* @media (max-width: 991.98px) {
     .site-footer {
-      padding-top: 30px; } }
+      padding-top: 30px; } } */
   .site-footer a {
     color: #000000; }
     .site-footer a:hover {
@@ -1380,13 +1380,11 @@ input.btn.btn-end{
 body {
     /* background: linear-gradient(to right, #d9afd9 0%, #97d9e1 100%); Ungu ke biru */
 
-    /* background: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 100%); Ungu muda ke biru muda  */
+    background: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 200%);  
 
     /* background: linear-gradient(to right, #f5f7fa 0%, #c3cfe2 100%); Gradasi biru */
 
     /* background: linear-gradient(to right, #fff1eb 0%, #ace0f9 100%); */
-
-/* background: linear-gradient(to right, #f5f7fa 0%, #c3cfe2 100%); */
 
 }
 /* CSS untuk tampilan desktop */
@@ -1403,72 +1401,53 @@ body {
         margin: 0 -15px;
     }
 
-    .col-md-6 {
-        width: 50%;
-        padding: 15px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
+    
+
+    .widget {
+        margin-bottom: 30px; /* Ensures spacing between widgets */
     }
 
-    .side-A, .side-B {
-        flex: 1;
-        margin-bottom: 20px;
+    .widget .social {
+        order: 2; /* Places social icons below text widget */
+        margin-top: 20px; /* Extra spacing above social media icons */
     }
 
-    .side-B {
-        order: 2;
+    .widget h3 {
+        margin-bottom: 15px; /* Spacing below headings */
     }
 
-    .side-A {
-        order: 1;
+    .widget p {
+        margin-bottom: 10px; /* Spacing below paragraphs */
     }
 
-    .remove-padd-right {
-        padding-right: 0;
+    .social li {
+        display: inline-block; /* Displays social icons inline */
+        margin-right: 10px; /* Spacing between icons */
     }
 
-    .remove-padd-left {
-        padding-left: 0;
-    }
-
-    .product-thumb {
-        display: flex;
-        justify-content: center;
+    .social li a {
+        display: inline-flex; /* Aligns icons properly */
         align-items: center;
+        justify-content: center;
+        width: 30px; /* Width of the icon links */
+        height: 30px; /* Height of the icon links */
+        border-radius: 15px; /* Makes the icon links circular */
+        background: #333; /* Background color of the icon links */
+        color: #fff; /* Color of the icons */
     }
 
-    .product-thumb .image img {
-        max-width: 100%;
-        height: auto;
-       
-    }
-
-    .product-desc-side {
-        padding: 20px;
-        
-    }
-
-    .product-desc-side h3 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-    }
-
-    .product-desc-side p {
-        /* font-size: 1em; */
-        line-height: 1.5;
-    }
-
-    .clear {
-        clear: both;
-    }
-
-    .clearfix::after {
-        content: "";
-        display: table;
-        clear: both;
+    .social i {
+        font-size: 14px; /* Size of the icons */
     }
 }
+
+/* Additional styles for smaller screens */
+@media (max-width: 768px) {
+    .social {
+        justify-content: center; /* Centers the social icons on smaller screens */
+    }
+}
+
 
 /* CSS untuk tampilan mobile */
 @media (max-width: 768px) {
@@ -1536,3 +1515,15 @@ body {
         display: none;
     }
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
